@@ -87,7 +87,17 @@ anxiety   = mean( i7, i8, i9 )
 
 ---
 
-## 5. Development Commands
+## 5. Dependency Management & Security Policy (MANDATORY)
+
+To preserve application security, artifact integrity, and minimize technical debt, all developers and AI agents MUST follow this policy:
+1. **Latest Stable Version Check:** Before installing any new software, dependency, or devDependency, you MUST verify that you are selecting its **latest stable version** (e.g. using `npm view <package> version`). Never install deprecated, legacy, or unmaintained versions.
+2. **Zero Known Vulnerabilities:** Run `npm audit` immediately after installing or updating dependencies. PRs with unresolved high/critical vulnerabilities will NOT be approved.
+3. **Currency Verification:** Run `npm outdated` to ensure existing dependencies remain current with upstream stable releases.
+4. **Single-File Bundle Constraint:** Any new dependency must be compatible with `vite-plugin-singlefile` and keep the total bundled `dist/index.html` size well under the 16 MB Claude artifact limit.
+
+---
+
+## 6. Development & Verification Commands
 
 ```bash
 # Run local development server
@@ -95,6 +105,10 @@ npm run dev
 
 # Run unit tests (Vitest)
 npm test
+
+# Verify dependencies are up to date and vulnerability-free
+npm outdated
+npm audit
 
 # Build single-file artifact bundle (dist/index.html)
 npm run build
