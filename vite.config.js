@@ -7,13 +7,7 @@ export default defineConfig({
     target: 'esnext',
     assetsInlineLimit: 100000000,
     chunkSizeWarningLimit: 100000000,
-    cssCodeSplit: false,
-    brotliSize: false,
-    rollupOptions: {
-      output: {
-        inlineDynamicImports: true
-      }
-    }
+    cssCodeSplit: false
   },
   test: {
     globals: true,
