@@ -1,0 +1,27 @@
+name: Technical Chore / Spike
+description: Architectural, infrastructure, or exploratory research task
+title: "[Task]: "
+labels: ["type:chore"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Objective
+      description: What infrastructure or exploration is needed?
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Implementation Steps
+      description: Checklist of concrete engineering tasks.
+      placeholder: |
+        - [ ] Configure Vite bundling
+        - [ ] Add Vitest config
+    validations:
+      required: true
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of Done
+      description: How do we know this task is completed?

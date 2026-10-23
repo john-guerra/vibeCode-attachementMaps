@@ -1,0 +1,45 @@
+name: User Story
+description: Standard Scrum user story with acceptance criteria
+title: "[Story]: "
+labels: ["type:user-story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### User Story Template
+        Please formulate the user story using the standard Agile template and link relevant PRD sections.
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: Follow the "As a [role], I want [capability] so that [benefit]" structure.
+      placeholder: |
+        As a reader of *Secure*,
+        I want to input my ratings for each family member,
+        So that I can see their positions on the anxiety x avoidance chart without doing arithmetic by hand.
+    validations:
+      required: true
+  - type: textarea
+    id: prd-reference
+    attributes:
+      label: PRD Reference & Evidence Context
+      description: Link or cite specific sections in `docs/attachment-map-PRD.md`.
+      placeholder: "PRD §4 Epic A1, §5.1 Relationship-specific items, §6 Scoring specification"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria (Given-When-Then)
+      description: Specific, testable criteria for the Definition of Done.
+      placeholder: |
+        - [ ] Given 9 items answered for a person, when saved, avoidance and anxiety are computed per §6.1.
+        - [ ] All unit test vectors in §6.4 pass.
+        - [ ] Accessibility: WCAG 2.2 AA compliant.
+    validations:
+      required: true
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical & Architectural Notes
+      description: Domain models, algorithms, storage contracts, or edge cases.

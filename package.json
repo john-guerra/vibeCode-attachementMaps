@@ -1,0 +1,30 @@
+{
+  "name": "attachment-map",
+  "version": "1.0.0",
+  "description": "Relationship-specific anxiety x avoidance attachment map using ECR-RS",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "attachment-theory",
+    "ecr-rs",
+    "psychometrics",
+    "relationship-science"
+  ],
+  "author": "John Alexis Guerra Gómez",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^6.0.0",
+    "vite-plugin-singlefile": "^2.1.0",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "jspdf": "^4.2.1"
+  }
+}
